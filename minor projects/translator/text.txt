@@ -1,0 +1,3 @@
+i am praveen pardhi
+i am learning python 
+i am working on making translator which will translate this to japanese
