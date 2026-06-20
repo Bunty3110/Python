@@ -4,18 +4,14 @@ import random
 import hashlib
 from voice_engine import speak, get_hybrid_input
 
-# --- Absolute File Paths Fix ---
-# This forces the CSV files to ALWAYS save in the exact same folder as main.py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 FILE_DOCTORS = os.path.join(BASE_DIR, "doctors.csv")
 FILE_PATIENTS = os.path.join(BASE_DIR, "patients.csv")
 FILE_APPTS = os.path.join(BASE_DIR, "appointments.csv")
 
-# --- Security ---
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
-# --- Database Initialization ---
 def init_db():
     if not os.path.exists(FILE_DOCTORS) or os.stat(FILE_DOCTORS).st_size == 0:
         with open(FILE_DOCTORS, "w", newline="", encoding="utf-8") as f:

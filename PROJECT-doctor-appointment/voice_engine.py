@@ -10,7 +10,7 @@ def speak(text):
     try:
         # 1. Initialize a fresh engine every single time it speaks
         engine = pyttsx3.init()
-        engine.setProperty('rate', 170) 
+        engine.setProperty('rate', 250) 
         
         print(f"🤖 [Audio]: {text}")
         engine.say(text)
