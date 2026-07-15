@@ -24,5 +24,5 @@ class Solution(object):
             X+=dx
             Y+=dy
         return ans
-
-        
+    
+    # revise properly and understand the logic of the code and also the logic of the problem and also try to solve it in a different way
